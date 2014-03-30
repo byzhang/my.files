@@ -1,0 +1,15 @@
+#!/usr/bin/env zsh
+source ~/.zshrc
+SESSION_PATH="/$HOME/.vim/sessions"
+TEST="$SESSION_PATH/$1.vim"
+if ls $TEST &> /dev/null; then
+  SESSION=$1
+  shift
+else
+  CURPATH=`pwd`
+  CURPATH=(${(s:/:)CURPATH})
+  SESSION=$CURPATH[-1]
+fi
+echo "vim -S $SESSION_PATH/$SESSION.vim $@"
+export CSCOPE_DB="$HOME/src"
+vim -S $SESSION_PATH/$SESSION.vim $@

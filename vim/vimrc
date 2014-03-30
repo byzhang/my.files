@@ -1,0 +1,52 @@
+" vimrc
+
+"
+set nocompatible
+filetype on
+filetype off
+syn on
+
+" EXTENSIONS {{{
+
+" Utils {{{
+source ~/.vim/functions/util.vim
+" }}}
+
+" _. Buffer Handling {{{
+source ~/.vim/functions/buffer_handling.vim
+" }}}
+
+" _. Tab {{{
+source ~/.vim/functions/insert_tab_wrapper.vim
+" }}}
+
+" }}}
+
+" Load external configuration before anything else {{{
+if filereadable(expand("~/.vim/before.vimrc"))
+  source ~/.vim/before.vimrc
+endif
+" }}}
+
+let mapleader = ","
+let maplocalleader = "\\"
+
+" VUNDLE {{{
+let s:bundle_path=$HOME."/.vim/bundle/"
+execute "set rtp+=".s:bundle_path."vundle/"
+call vundle#rc()
+
+Bundle 'gmarik/vundle'
+" }}}
+
+" Install user-supplied Bundles {{{
+for fpath in split(globpath('~/.vim/settings', '*.vim'), '\n')
+  exec ':so ' . fpath
+endfor
+" }}}
+
+" Load addidional configuration (ie to overwrite shorcuts) {{{
+if filereadable(expand("~/.vim/after.vimrc"))
+  source ~/.vim/after.vimrc
+endif
+" }}}
