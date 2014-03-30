@@ -27,6 +27,20 @@ create_symlinks () {
         cp -Rf $INSTALLDIR/zprezto/modules ~/.zprezto/modules
         cp -Rf $INSTALLDIR/zprezto/runcoms ~/.zprezto/runcoms
     fi
+
+    if [ ! -f ~/.gitconfig ]; then
+        echo "Now, we will create ~/.gitconfig and ~/.gitignore, and ~/.git-commit-template.txt files to configure git."
+        ln -sfn $INSTALLDIR/git/gitconfig ~/.gitconfig
+    fi
+
+    if [ ! -f ~/.gitignore ]; then
+        ln -sfn $INSTALLDIR/git/gitignore ~/.gitignore
+    fi
+
+    if [ ! -f ~/.git-commit-template.txt ]; then
+        ln -sfn $INSTALLDIR/git/git-commit-template.txt ~/.git-commit-template.txt
+    fi
+
   }
 
 which git > /dev/null
@@ -72,5 +86,5 @@ fi
 
 echo "Enjoy!"
 
-vim +BundleInstall +qall 2>/dev/null
+# vim +BundleInstall +qall 2>/dev/null
 

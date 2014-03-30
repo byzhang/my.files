@@ -29,5 +29,3 @@ nmap <leader>gg :let @/="\\<<C-R><C-W>\\>"<CR>:set hls<CR>:silent Ggrep -w "<C-R
 nnoremap <silent> ,dg :diffget<CR>
 nnoremap <silent> ,dp :diffput<CR>
 
-" autocmd FileType gitcommit set tw=68 spell
-" autocmd FileType gitcommit setlocal foldmethod=manual
