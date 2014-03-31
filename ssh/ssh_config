@@ -1,0 +1,8 @@
+Host lab
+        Hostname weiyoulab.3322.org
+        Port 8022
+
+Host *
+        ForwardAgent yes
+        X11Forwarding yes
+        X11DisplayOffset 10
