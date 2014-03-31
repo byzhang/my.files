@@ -49,4 +49,6 @@ endfor
 if filereadable(expand("~/.vim/after.vimrc"))
   source ~/.vim/after.vimrc
 endif
+
+set background=dark
 " }}}
