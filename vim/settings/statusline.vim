@@ -32,7 +32,7 @@ function! MyReadonly()
 endfunction
 
 function! MyFilename()
-  let fname = expand('%:t')
+  let fname = FilenameMaybeWithPath()
   return fname == 'ControlP' ? g:lightline.ctrlp_item :
         \ fname == '__Tagbar__' ? g:lightline.fname :
         \ fname =~ '__Gundo\|NERD_tree' ? '' :
@@ -42,6 +42,33 @@ function! MyFilename()
         \ ('' != MyReadonly() ? MyReadonly() . ' ' : '') .
         \ ('' != fname ? fname : '[No Name]') .
         \ ('' != MyModified() ? ' ' . MyModified() : '')
+endfunction
+
+" from https://github.com/itchyny/lightline.vim/issues/43, with bug fixed.
+function! FilenameMaybeWithPath()
+  let n = tabpagenr()
+  let buflist = tabpagebuflist(n)
+  let winnr = tabpagewinnr(n)
+  let bufnum = buflist[winnr - 1]
+  let bufname = expand('#'.bufnum.':t')
+  let buffullname = expand('#'.bufnum)
+  let buffullnames = []
+  let bufnames = []
+  for i in buflist
+    " if i != n
+    if i != bufnum
+      " let num = tabpagebuflist(i)[tabpagewinnr(i) - 1]
+      let num = i
+      call add(buffullnames, expand('#' . num))
+      call add(bufnames, expand('#' . num . ':t'))
+    endif
+  endfor
+  let i = index(bufnames, bufname)
+  if strlen(bufname) && i >= 0 && buffullnames[i] != buffullname
+    return buffullname
+  else
+    return bufname
+  endif
 endfunction
 
 function! MyFugitive()
