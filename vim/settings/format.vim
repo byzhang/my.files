@@ -4,11 +4,10 @@ nmap <leader>af :Autoformat<CR><CR>
 
 Bundle 'Yggdroot/indentLine'
 nmap <leader>i :IndentLinesToggle<CR>
-let g:indentLine_fileType=['python']
+" let g:indentLine_fileType=['python']
 let g:indentLine_color_term = 111
 let g:indentLine_color_gui = '#DADADA'
-let g:indentLine_char = 'c'
-"let g:indentLine_char = '∙▹¦'
+" let g:indentLine_char = '∙▹¦'
 let g:indentLine_char = '∙'
 
 set list

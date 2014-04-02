@@ -4,7 +4,7 @@ Bundle "nelstrom/vim-visual-star-search"
 Bundle 'rking/ag.vim'
 " Open the Ag command and place the cursor into the quotes
 nmap ,ag :Ag ""<Left>
-nmap ,af :AgFile ""<Left>
+nmap ,agf :AgFile ""<Left>
 
 let g:lightline = {
       \ 'colorscheme': 'wombat',
