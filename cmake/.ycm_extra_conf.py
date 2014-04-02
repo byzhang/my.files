@@ -58,13 +58,13 @@ def MakeRelativePathsInFlagsAbsolute(flags, working_directory):
 
 
 def AddExtraFlags(flags, filename):
+    flags.extend(['-I/usr/include/clang/3.4/include/'])
     # Without this, clang tries to compile .h files as C instead of C++
     # We still can't easily know what type of file a .h file is (C or C++?)
     if not IsCFile(filename):
         flags.extend(['-x', 'c++'])
     # The static-float-init flags are needed to work around a spurious warning
     # about constexpr coming from census-interface.h
-    # Seems relevant: https://b.corp.google.com/issue?id=8089224
     flags.extend(['-Wno-static-float-init',
                   '-Wno-gnu-static-float-init'])
 
@@ -149,7 +149,6 @@ def GetDatabaseForPath(path):
 
 NO_FLAGS = {'flags': [], 'do_cache': False, 'flags_ready': False}
 
-# path to google3 dir -> database object
 # access to this should be protected by the below lock!
 _databases = collections.defaultdict(lambda: None)
 _databases_lock = Lock()
