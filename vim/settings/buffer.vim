@@ -3,7 +3,8 @@ nmap <leader>be :EasyBufferToggle<enter>
 
 " Fast saving and closing current buffer without closing windows displaying the
 " buffer
-nmap <leader>wq :w!<cr>:Bclose<cr>
+Bundle "rgarver/Kwbd.vim"
+nmap <leader>wq :Kwbd<CR>
 
 " Easy buffer navigation
 noremap <leader>bp :bprevious<cr>
