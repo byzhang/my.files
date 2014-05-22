@@ -36,7 +36,7 @@ function! <SID>StripTrailingWhitespaces()
     call cursor(l, c)
 endfunction
 command! StripTrailingWhitespaces call <SID>StripTrailingWhitespaces()
-nmap ,w :StripTrailingWhitespaces<CR>
+nmap ,s :StripTrailingWhitespaces<CR>
 
 " }}}
 
@@ -47,5 +47,6 @@ set shiftwidth=2
 set softtabstop=2
 set tabstop=2
 set expandtab
+set colorcolumn=80
 
 filetype indent on
