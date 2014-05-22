@@ -15,4 +15,4 @@ endfunction
 " Yank content in OS's clipboard. `o` stands for "OS's Clipoard".
 vnoremap <leader>yo "*y
 " Paste content from OS's clipboard
-nnoremap <leader>po "*p
+nnoremap <leader>co "*p

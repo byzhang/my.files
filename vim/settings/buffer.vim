@@ -1,5 +1,5 @@
 Bundle 'troydm/easybuffer.vim'
-nmap <leader>be :EasyBufferToggle<enter>
+" nmap <leader>bt :EasyBufferToggle<enter>
 
 " Fast saving and closing current buffer without closing windows displaying the
 " buffer
