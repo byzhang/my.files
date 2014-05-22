@@ -41,7 +41,7 @@ nnoremap g, g,zz
 " Open a Quickfix window for the last search.
 nnoremap <silent> <leader>? :execute 'vimgrep /'.@/.'/g %'<CR>:copen<CR>
 " ,q to toggle quickfix window (where you have stuff like Ag)
-nmap <silent> ,qc :cclose<CR>
+" nmap <silent> ,qc :cclose<CR>
 
 " Highlight word {{{
 nnoremap <silent> <leader>hh :execute 'match InterestingWord1 /\<<c-r><c-w>\>/'<cr>
