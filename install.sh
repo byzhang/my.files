@@ -24,8 +24,8 @@ create_symlinks () {
         echo "Now, we will configure zprezto."
         ln -sfn $INSTALLDIR/zprezto/bin ~/.zprezto/bin
         ln -sfn $INSTALLDIR/zprezto/zsh ~/.zprezto/zsh
-        cp -Rf $INSTALLDIR/zprezto/modules ~/.zprezto/modules
-        cp -Rf $INSTALLDIR/zprezto/runcoms ~/.zprezto/runcoms
+        cp -Rf $INSTALLDIR/zprezto/modules/* ~/.zprezto/modules
+        cp -Rf $INSTALLDIR/zprezto/runcoms/* ~/.zprezto/runcoms
     fi
 
     if [ ! -f ~/.gitconfig ]; then
