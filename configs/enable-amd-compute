@@ -1,0 +1,10 @@
+#! /bin/bash
+xauth extract /tmp/x11-auth-file "$DISPLAY"
+chmod 660 /tmp/x11-auth-file
+chgrp amdgpu /tmp/x11-auth-file
+
+cat > /tmp/enable-amd-compute <<EOF
+export COMPUTE=$DISPLAY
+unset DISPLAY
+export XAUTHORITY=/tmp/x11-auth-file
+EOF
