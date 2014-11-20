@@ -9,7 +9,7 @@ syn on
 " EXTENSIONS {{{
 
 " Utils {{{
-source ~/.vim/functions/util.vim
+" source ~/.vim/functions/util.vim
 " }}}
 
 " _. Buffer Handling {{{
