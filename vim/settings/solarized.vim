@@ -1,3 +1,4 @@
+Bundle 'godlygeek/csapprox'
 Bundle 'skwp/vim-colors-solarized'
 if !has("gui_macvim")
   set t_Co=256
