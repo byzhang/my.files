@@ -1,7 +1,7 @@
 SET (CMAKE_C_COMPILER /usr/bin/gcc)
 SET (CMAKE_C_FLAGS          "-std=c99 -march=x86-64 -m64 -Winline")
 SET (CMAKE_CXX_COMPILER /usr/bin/g++)
-SET (CMAKE_CXX_FLAGS        "-std=c++11 -march=x86-64 -m64 -Winline -fno-omit-frame-pointer -fPIC -I/usr/local/include -Wall -Wextra -Woverloaded-virtual -Wno-unused-local-typedefs --param inline-unit-growth=150 --param max-inline-insns-single=500 --param large-function-growth=600")
+SET (CMAKE_CXX_FLAGS        "-std=c++1y -march=x86-64 -m64 -Winline -fno-omit-frame-pointer -fPIC -I/usr/local/include -Wall -Wextra -Woverloaded-virtual -Wno-unused-local-typedefs --param inline-unit-growth=150 --param max-inline-insns-single=500 --param large-function-growth=600")
 SET (CMAKE_INCLUDE_SYSTEM_FLAG_CXX "isystem")
 
 set (CMAKE_C_FLAGS          "${CMAKE_C_FLAGS}" CACHE STRING "c flags")
