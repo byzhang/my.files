@@ -11,6 +11,8 @@
   frag = magenta bold
   old = red
   new = green
+[commit]
+  template = ~/.git-commit-template.txt
 [alias]
   # add
   a = add                           # add
