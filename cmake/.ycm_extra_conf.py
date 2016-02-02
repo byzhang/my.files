@@ -58,7 +58,9 @@ def MakeRelativePathsInFlagsAbsolute(flags, working_directory):
 
 
 def AddExtraFlags(flags, filename):
-    flags.extend(['-I/usr/include/clang/3.4/include/'])
+    flags.extend(['-I/usr/include/clang/3.4/include/',
+                  '-I/usr/include/x86_64-linux-gnu/c++/4.9/',
+                  '-I/usr/include/c++/4.9/'])
     # Without this, clang tries to compile .h files as C instead of C++
     # We still can't easily know what type of file a .h file is (C or C++?)
     if not IsCFile(filename):
