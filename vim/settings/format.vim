@@ -1,5 +1,6 @@
-let g:formatprg_args_cpp = "-A14s2"
 Bundle "Chiel92/vim-autoformat"
+let g:formatdef_my_custom_cpp = '"astyle -A14s".&shiftwidth'
+let g:formatters_cpp = ['my_custom_cpp']
 nmap <leader>af :Autoformat<CR><CR>
 
 Bundle 'Yggdroot/indentLine'
