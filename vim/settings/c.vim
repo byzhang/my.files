@@ -1,2 +1,0 @@
-Bundle 'devx/c.vim'
-
