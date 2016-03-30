@@ -14,4 +14,7 @@ let g:syntastic_enable_python_checker = 0
 " let g:syntastic_python_checkers=['forsted', 'pylama']
 " let g:syntastic_python_pylama_args='--ignore=E501'
 
+filetype off
 Bundle 'dcharbon/vim-flatbuffers'
+filetype plugin indent on
+syntax on
