@@ -76,7 +76,7 @@ fi
 
 if [ ! -d "vim/bundle/vundle" ]; then
     echo "Then, we install Vundle (https://github.com/gmarik/vundle)."
-    git clone https://github.com/gmarik/vundle.git vim/bundle/vundle
+    git clone https://github.com/VundleVim/Vundle.vim.git vim/bundle/Vundle.vim
 fi
 
 if [ ! -d "vim/sessions" ]; then
@@ -86,5 +86,4 @@ fi
 
 echo "Enjoy!"
 
-# vim +BundleInstall +qall 2>/dev/null
-
+vim +PluginInstall +qall

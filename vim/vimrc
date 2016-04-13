@@ -32,11 +32,11 @@ let mapleader = ","
 let maplocalleader = "\\"
 
 " VUNDLE {{{
-let s:bundle_path=$HOME."/.vim/bundle/"
-execute "set rtp+=".s:bundle_path."vundle/"
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
-Bundle 'gmarik/vundle'
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
 " }}}
 
 " Install user-supplied Bundles {{{
@@ -50,5 +50,9 @@ if filereadable(expand("~/.vim/after.vimrc"))
   source ~/.vim/after.vimrc
 endif
 
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
 set background=dark
+colorscheme solarized
 " }}}
