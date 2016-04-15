@@ -19,10 +19,12 @@ if [ ! -d "$INSTALLDIR" ]; then
   cd $INSTALLDIR
 else
   echo "Seems like you already are one of ours, so let's update Vimified to be as awesome as possible."
+  create_symlinks
   cd $INSTALLDIR
   #git pull origin master
-  create_symlinks
 fi
+
+mv vim/settings/ycm.vim.docker vim/settings/ycm.vim
 
 if [ ! -d "vim/bundle" ]; then
   echo "Now, we will create a separate directory to store the bundles Vim will use."
@@ -43,3 +45,10 @@ fi
 echo "Enjoy!"
 
 echo | echo | vim +PluginInstall +qall &>/dev/null
+
+cd ~/.vim/bundle/YouCompleteMe
+./install.py --clang-completer
+
+cd
+ln -sf my.files/cmake .cmake
+ln -sf ~/my.files/cmake/.ycm_extra_conf.py
