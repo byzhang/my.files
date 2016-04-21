@@ -5,5 +5,4 @@
 
 #include "%FILE%.h"
 
-
 %HERE%

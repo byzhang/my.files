@@ -3,9 +3,9 @@
  * Copyright (C) %YEAR% %USER% <%MAIL%>
  */
 
-#ifndef %GUARD%
-#define %GUARD%
+#ifndef %USER%_%GUARD%
+#define %USER%_%GUARD%
 
 %HERE%
 
-#endif /* !%GUARD% */
+#endif /* !%USER%_%GUARD% */
