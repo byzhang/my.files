@@ -51,4 +51,4 @@ cd ~/.vim/bundle/YouCompleteMe
 
 cd
 ln -sf my.files/cmake .cmake
-ln -sf ~/my.files/cmake/.ycm_extra_conf.py
+ln -sf .cmake/.ycm_extra_conf.py
