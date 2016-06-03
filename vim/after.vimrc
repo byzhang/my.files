@@ -1,7 +1,4 @@
 " General {{{
-filetype plugin indent on
-
-syntax on
 
 " Highlight VCS conflict markers
 match ErrorMsg '^\(<\|=\|>\)\{7\}\([^=].\+\)\?$'
@@ -89,4 +86,3 @@ augroup END
 " When vimrc is edited, reload it
 autocmd! BufWritePost vimrc source ~/.vimrc
 " }}}
-

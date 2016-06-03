@@ -2,9 +2,6 @@
 
 "
 set nocompatible
-filetype on
-filetype off
-syn on
 
 " EXTENSIONS {{{
 
@@ -32,6 +29,7 @@ let mapleader = ","
 let maplocalleader = "\\"
 
 " VUNDLE {{{
+filetype off                 " required
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
@@ -53,6 +51,7 @@ endif
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
+syntax on                    " required
 set background=dark
 colorscheme solarized
 " }}}
