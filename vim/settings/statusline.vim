@@ -1,9 +1,13 @@
 Bundle "itchyny/lightline.vim"
+Bundle "majutsushi/tagbar"
 let g:lightline = {
       \ 'colorscheme': 'wombat',
       \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'filename' ], ['ctrlpmark'] ],
+      \   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'filename' ], ['ctrlpmark', 'tagbar'] ],
       \   'right': [ [ 'syntastic', 'lineinfo' ], ['percent'], [ 'fileformat', 'fileencoding', 'filetype' ] ]
+      \ },
+      \ 'component': {
+      \         'tagbar': '%{tagbar#currenttag("%s", "", "f")}',
       \ },
       \ 'component_function': {
       \   'fugitive': 'MyFugitive',
@@ -119,9 +123,9 @@ function! CtrlPMark()
 endfunction
 
 let g:ctrlp_status_func = {
-  \ 'main': 'CtrlPStatusFunc_1',
-  \ 'prog': 'CtrlPStatusFunc_2',
-  \ }
+      \ 'main': 'CtrlPStatusFunc_1',
+      \ 'prog': 'CtrlPStatusFunc_2',
+      \ }
 
 function! CtrlPStatusFunc_1(focus, byfname, regex, prev, item, next, marked)
   let g:lightline.ctrlp_regex = a:regex
@@ -138,7 +142,7 @@ endfunction
 let g:tagbar_status_func = 'TagbarStatusFunc'
 
 function! TagbarStatusFunc(current, sort, fname, ...) abort
-    let g:lightline.fname = a:fname
+  let g:lightline.fname = a:fname
   return lightline#statusline(0)
 endfunction
 
