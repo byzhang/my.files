@@ -1,6 +1,6 @@
 #!/usr/env sh
 
-INSTALLDIR=${INSTALLDIR:-"./my.files"}
+INSTALLDIR=${INSTALLDIR:-"my.files"}
 create_symlinks () {
   if [ ! -f ~/.vim ]; then
     echo "Now, we will create ~/.vim and ~/.vimrc files to configure Vim."
