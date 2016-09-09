@@ -20,14 +20,6 @@ create_symlinks () {
     ln -sfn $INSTALLDIR/tmux/tmux.conf ~/.tmux.conf
   fi
 
-  if [ -d ~/.zprezto ]; then
-    echo "Now, we will configure zprezto."
-    ln -sfn $INSTALLDIR/zprezto/bin ~/.zprezto/bin
-    ln -sfn $INSTALLDIR/zprezto/zsh ~/.zprezto/zsh
-    cp -Rf $INSTALLDIR/zprezto/modules/* ~/.zprezto/modules
-    cp -Rf $INSTALLDIR/zprezto/runcoms/* ~/.zprezto/runcoms
-  fi
-
   if [ ! -f ~/.gitconfig ]; then
     echo "Now, we will create ~/.gitconfig and ~/.gitignore, and ~/.git-commit-template.txt files to configure git."
     ln -sfn $INSTALLDIR/git/gitconfig ~/.gitconfig
@@ -86,4 +78,11 @@ fi
 
 echo "Enjoy!"
 
-vim +PluginInstall +qall
+echo | echo | vim +PluginInstall +qall &>/dev/null
+
+cd ~/.vim/bundle/YouCompleteMe
+./install.py --clang-completer
+
+cd
+ln -sf my.files/cmake .cmake
+ln -sf .cmake/.ycm_extra_conf.py
