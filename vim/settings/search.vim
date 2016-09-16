@@ -1,12 +1,12 @@
-Bundle "vim-scripts/IndexedSearch"
-Bundle "nelstrom/vim-visual-star-search"
+Plugin "henrik/vim-indexed-search"
+Plugin "nelstrom/vim-visual-star-search"
 
-Bundle 'rking/ag.vim'
+Plugin 'rking/ag.vim'
 " Open the Ag command and place the cursor into the quotes
 nmap ,ag :Ag ""<Left>
 nmap ,agf :AgFile ""<Left>
 
-Bundle "skwp/greplace.vim"
+Plugin "skwp/greplace.vim"
 set grepprg=git\ grep
 let g:grep_cmd_opts = '--line-number'
 
