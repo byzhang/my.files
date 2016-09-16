@@ -1,4 +1,4 @@
-Bundle "tomtom/tcomment_vim.git"
+Plugin 'tomtom/tcomment_vim.git'
 map <leader>/ :TComment<CR>
 imap <leader>/ <Esc>:TComment<CR>i
 " extensions for tComment plugin. Normally

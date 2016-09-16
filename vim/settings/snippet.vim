@@ -1,3 +1,3 @@
-Bundle "SirVer/ultisnips"
-Bundle "honza/vim-snippets"
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
 

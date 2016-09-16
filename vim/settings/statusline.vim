@@ -1,5 +1,5 @@
-Bundle "itchyny/lightline.vim"
-Bundle "majutsushi/tagbar"
+Plugin 'itchyny/lightline.vim'
+Plugin 'majutsushi/tagbar'
 let g:lightline = {
       \ 'colorscheme': 'wombat',
       \ 'active': {
@@ -160,5 +160,5 @@ let g:vimfiler_force_overwrite_statusline = 0
 let g:vimshell_force_overwrite_statusline = 0
 
 let g:airline#extensions#tmuxline#enabled = 0
-Bundle "edkolev/tmuxline.vim"
+Plugin 'edkolev/tmuxline.vim'
 

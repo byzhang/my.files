@@ -1,5 +1,5 @@
-Bundle "vim-scripts/camelcasemotion.git"
-Bundle 'terryma/vim-multiple-cursors'
+Plugin 'vim-scripts/camelcasemotion.git'
+Plugin 'terryma/vim-multiple-cursors'
 " Turn off default key mappings
 let g:multi_cursor_use_default_mapping=0
 

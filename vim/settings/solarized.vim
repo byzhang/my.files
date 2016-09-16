@@ -1,5 +1,5 @@
-Bundle 'godlygeek/csapprox'
-Bundle 'skwp/vim-colors-solarized'
+Plugin 'godlygeek/csapprox'
+Plugin 'skwp/vim-colors-solarized'
 if !has("gui_macvim")
   set t_Co=256
   let g:solarized_termcolors=256

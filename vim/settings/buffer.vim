@@ -1,9 +1,9 @@
-Bundle 'troydm/easybuffer.vim'
+Plugin 'troydm/easybuffer.vim'
 " nmap <leader>bt :EasyBufferToggle<enter>
 
 " Fast saving and closing current buffer without closing windows displaying the
 " buffer
-Bundle "rgarver/Kwbd.vim"
+Plugin 'rgarver/Kwbd.vim'
 nmap <leader>wq :Kwbd<CR>
 
 " Easy buffer navigation

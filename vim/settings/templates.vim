@@ -1,4 +1,4 @@
-Bundle "aperezdc/vim-template.git"
+Plugin 'aperezdc/vim-template.git'
 
 let g:email = "byzhang@"
 let g:username = "CloudBrain"

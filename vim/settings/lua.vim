@@ -1,1 +1,1 @@
-Bundle 'xolox/vim-lua-ftplugin'
+Plugin 'xolox/vim-lua-ftplugin'

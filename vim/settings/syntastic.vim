@@ -1,4 +1,4 @@
-Bundle 'scrooloose/syntastic'
+Plugin 'scrooloose/syntastic'
 "mark syntax errors with :signs
 let g:syntastic_enable_signs=2
 let g:syntastic_error_symbol='✗'

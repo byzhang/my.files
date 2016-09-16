@@ -1,4 +1,4 @@
-Bundle 'kien/ctrlp.vim'
+Plugin 'kien/ctrlp.vim'
 let g:ctrlp_working_path_mode = ''
 if executable('ag')
   " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore

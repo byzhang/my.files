@@ -1,9 +1,9 @@
-Bundle "Chiel92/vim-autoformat"
+Plugin 'Chiel92/vim-autoformat'
 let g:formatdef_my_custom_cpp = '"astyle -A14s".&shiftwidth'
 let g:formatters_cpp = ['my_custom_cpp']
 nmap <leader>af :Autoformat<CR><CR>
 
-Bundle 'Yggdroot/indentLine'
+Plugin 'Yggdroot/indentLine'
 nmap <leader>i :IndentLinesToggle<CR>
 " let g:indentLine_fileType=['python']
 let g:indentLine_color_term = 111

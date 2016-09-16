@@ -24,10 +24,10 @@ let g:pymode_syntax_space_errors = g:pymode_syntax_all
 
 " Don't autofold code
 let g:pymode_folding = 0
-Bundle 'klen/python-mode'
+Plugin 'klen/python-mode'
 autocmd FileType python map <buffer> <leader>af :PymodeLintAuto<CR>
 
-Bundle 'python_match.vim'
+Plugin 'python_match.vim'
 
 let g:jedi#completions_enabled = 0
 let g:jedi#use_tabs_not_buffers = 0
@@ -39,5 +39,5 @@ let g:jedi#documentation_command = "K"
 let g:jedi#usages_command = "<leader>pu"
 let g:jedi#rename_command = "<leader>pr"
 let g:jedi#show_call_signatures = "1"
-Bundle "davidhalter/jedi-vim"
+Plugin 'davidhalter/jedi-vim'
 

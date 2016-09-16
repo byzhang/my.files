@@ -1,6 +1,6 @@
-Bundle 'gregsexton/gitv'
+Plugin 'gregsexton/gitv'
 
-Bundle 'tpope/vim-fugitive'
+Plugin 'tpope/vim-fugitive'
 " The tree buffer makes it easy to drill down through the directories of your
 " git repository, but it’s not obvious how you could go up a level to the
 " parent directory. Here’s a mapping of .. to the above command, but

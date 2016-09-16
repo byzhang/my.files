@@ -1,3 +1,3 @@
-Bundle 'moll/vim-node'
-Bundle 'jelera/vim-javascript-syntax'
-Bundle 'mustache/vim-mustache-handlebars'
+Plugin 'moll/vim-node'
+Plugin 'jelera/vim-javascript-syntax'
+Plugin 'mustache/vim-mustache-handlebars'
