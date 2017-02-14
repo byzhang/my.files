@@ -48,6 +48,9 @@ endfor
 if filereadable(expand("~/.vim/after.vimrc"))
   source ~/.vim/after.vimrc
 endif
+if filereadable(expand("~/.local/.vimrc.user"))
+  source ~/.local/.vimrc.user
+endif
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
