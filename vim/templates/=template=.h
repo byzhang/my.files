@@ -3,9 +3,9 @@
  * Copyright (C) %YEAR% %USER% <%MAIL%>
  */
 
-#ifndef %USER%_%GUARD%
-#define %USER%_%GUARD%
+#pragma once
 
+namespace cloudbrain {
 %HERE%
 
-#endif /* !%USER%_%GUARD% */
+}  // namespace cloudbrain
